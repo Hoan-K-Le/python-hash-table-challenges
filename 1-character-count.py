@@ -28,5 +28,17 @@ the character r occurs 1 times
 the character d occurs 1 times
 '''
 
+
 def character_count(string):
-  pass
+    hash_table = {}
+    for str in string:
+        if str in hash_table:
+            hash_table[str] = hash_table[str] + 1
+        else:
+            hash_table[str] = 1
+
+    return hash_table
+
+
+character_count('heggummus')
+print(character_count('heggummus'))
